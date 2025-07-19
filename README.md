@@ -29,7 +29,12 @@ Support Copilot streamlines this workflow by:
 
 *Note: All screenshots remain on your local machine until you explicitly choose to include them in your AI queries.*
 
-[🎥 Watch Demo Video](https://raw.githubusercontent.com/maxshlain/support-copilot/refs/heads/main/demo.mp4)
+## Demo Video
+
+<video width="800" controls>
+  <source src="https://raw.githubusercontent.com/maxshlain/support-copilot/refs/heads/main/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag. <a href="https://raw.githubusercontent.com/maxshlain/support-copilot/refs/heads/main/demo.mp4">Download the demo video</a>
+</video>
 
 ## Requirements
 
