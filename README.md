@@ -29,7 +29,7 @@ Support Copilot streamlines this workflow by:
 
 *Note: All screenshots remain on your local machine until you explicitly choose to include them in your AI queries.*
 
-[🎥 Watch Demo Video](https://www.youtube.com/watch?v=example)
+[🎥 Watch Demo Video](https://raw.githubusercontent.com/maxshlain/support-copilot/refs/heads/main/demo.mp4)
 
 ## Requirements
 
