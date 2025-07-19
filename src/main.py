@@ -22,7 +22,7 @@ except ImportError:
     print("Or if using uv: uv add pyautogui")
     sys.exit(1)
 
-def cleanup_old_screenshots(screenshots_dir, max_files=10):
+def cleanup_old_screenshots(screenshots_dir, max_files=100):
     """Remove old screenshots, keeping only the most recent max_files."""
     try:
         screenshot_files = list(screenshots_dir.glob("screenshot_*.png"))
@@ -85,8 +85,8 @@ Examples:
     parser.add_argument(
         "--keep", "-k",
         type=int,
-        default=10,
-        help="Number of screenshots to keep (default: 10)"
+        default=100,
+        help="Number of screenshots to keep (default: 100)"
     )
     
     return parser.parse_args()
@@ -147,7 +147,6 @@ def main():
                 screenshot_count += 1
                 consecutive_errors = 0
                 print(f"Screenshot {screenshot_count} saved: {filename}")
-                print(f"Also saved as: latest.png")
                 
                 # Clean up old screenshots to keep only the specified number
                 cleanup_old_screenshots(screenshots_dir, max_files=args.keep)
