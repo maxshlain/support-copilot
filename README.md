@@ -1,44 +1,83 @@
-# README_NEW.MD
+# Support Copilot: AI-Powered Visual Support Assistant
 
-# Support Copilot: A Modern Approach to AI-Powered Support
+## The Problem
 
-## 🚀 Overview
-Support Copilot is a next-generation support automation tool designed to supercharge your customer support workflow. By leveraging advanced AI, streamlined code, and a developer-first philosophy, Support Copilot offers a unique, extensible, and efficient approach to building support solutions.
+Every developer and support engineer knows this scenario: you're on a support call, the customer shares their screen showing an issue, and you need help figuring it out. Traditionally, this meant:
+- Taking screenshots manually
+- Pasting them into chat tools
+- Asking colleagues or AI for help
+- Repeating the process multiple times
 
-## 🌟 Why This Approach?
-- **AI-First Design:** Integrates state-of-the-art AI to automate repetitive tasks, suggest solutions, and empower support agents.
-- **Developer-Centric:** Built with clarity and extensibility in mind. The codebase is clean, modular, and easy to adapt for your unique needs.
-- **Open & Transparent:** No black boxes. Every part of the system is open for review, customization, and improvement.
-- **Modern Python Stack:** Utilizes the latest Python standards and best practices for reliability and maintainability.
+This screenshot-paste-ask-repeat cycle is inefficient and breaks your flow during critical support situations.
 
-## 🛠️ Key Features
-- **Automated Support Flows:** Let AI handle common queries, freeing up human agents for complex cases.
-- **Easy Integration:** Designed to plug into your existing systems with minimal friction.
-- **Customizable Workflows:** Adapt the logic to fit your business, not the other way around.
-- **Rich Documentation & Screenshots:** Get started quickly with clear docs and visual guides.
+## The Solution
 
-## 📂 Project Structure
-- `src/` — Main application code
-- `screenshots/` — Visual walkthroughs and UI samples
-- `pyproject.toml`, `uv.lock` — Modern Python packaging and dependency management
-- `README.md` — Project documentation
+Support Copilot streamlines this workflow by:
+- **Automatically capturing screenshots** every 5 seconds during support calls
+- **Keeping screenshots local** until you choose to share them
+- **Integrating with GitHub Copilot** for instant AI assistance
+- **Maintaining context** across multiple queries in the same session
 
-## 🖼️ See It In Action
-Check the `screenshots/` folder for real examples of Support Copilot in use.
+## How It Works
 
-## 💡 Get Started
-1. Clone the repo
-2. Install dependencies: `uv pip install -r requirements.txt` or use your preferred tool
-3. Run the app: `python src/main.py`
+1. **Start a support call** - Customer shares their screen
+2. **Launch Support Copilot** - Begin automatic screenshot capture
+3. **When you need help** - Select a predefined prompt template
+4. **Add context** - Include the latest screenshot and additional details
+5. **Get AI assistance** - GitHub Copilot analyzes the visual context and provides guidance
+6. **Iterate as needed** - Continue the conversation with maintained context
 
-## 🤝 Contribute
-We welcome contributions! Fork, improve, and submit a PR. Let’s build the future of support together.
+*Note: All screenshots remain on your local machine until you explicitly choose to include them in your AI queries.*
 
-## 📣 Why Choose Support Copilot?
-- **Empower your team** with AI, not just automation
-- **Own your workflows** — no vendor lock-in
-- **Join a growing community** of forward-thinking support engineers
+[🎥 Watch Demo Video](https://www.youtube.com/watch?v=example)
 
----
+## Requirements
 
-Support Copilot: The future of support, built by and for developers.
+- **Python 3.10+** (currently tested on macOS only)
+- **Visual Studio Code** (latest version)
+- **GitHub Copilot** subscription with image-capable model
+  - Claude Sonnet recommended for best results
+  - Other vision-capable LLMs also supported
+
+## Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/support-copilot.git
+cd support-copilot
+
+# Run the application
+uv run src/main.py
+```
+
+## Features
+
+- ✅ Automatic screenshot capture (configurable interval)
+- ✅ Local storage with privacy controls
+- ✅ Predefined prompt templates
+- ✅ Context persistence across queries
+- ✅ GitHub Copilot integration
+- ✅ Cross-platform support (macOS tested)
+
+## Contributing
+
+We welcome contributions! Here's how to get started:
+
+1. Fork this repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Make your changes and test them
+4. Submit a pull request with a clear description
+
+Let's build the future of AI-assisted support together! 🚀
+
+## License
+
+[Add your license here]
+
+## Support
+
+If you encounter issues or have questions:
+- Open an issue on GitHub
+- Check the documentation in `/docs`
+- Review existing discussions
+
