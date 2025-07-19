@@ -31,10 +31,7 @@ Support Copilot streamlines this workflow by:
 
 ## Demo Video
 
-<video width="800" controls>
-  <source src="https://raw.githubusercontent.com/maxshlain/support-copilot/refs/heads/main/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag. <a href="https://raw.githubusercontent.com/maxshlain/support-copilot/refs/heads/main/demo.mp4">Download the demo video</a>
-</video>
+![Demo Video](demo.mp4)
 
 ## Requirements
 
