@@ -31,7 +31,7 @@ Support Copilot streamlines this workflow by:
 
 ## Demo Video
 
-[![Watch Demo Video](https://img.youtube.com/vi/0_Unry4LREM/maxresdefault.jpg)](https://youtu.be/0_Unry4LREM)
+[![Watch Demo Video](https://img.youtube.com/vi/0_Unry4LREM/maxresdefault.jpg)](https://youtu.be/gBFIvRbCoyM)
 
 ## Requirements
 
