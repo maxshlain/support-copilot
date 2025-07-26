@@ -35,7 +35,7 @@ from PIL import Image, ImageTk
 class ScreenshotTool:
     def __init__(self, args=None):
         self.root = tk.Tk()
-        self.root.title("Area Screenshot Tool")
+        self.root.title("Select area for screenshots for support-copilot")
         self.root.geometry("500x400")
 
         # Store command line arguments
