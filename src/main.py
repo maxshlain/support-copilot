@@ -131,10 +131,10 @@ class ScreenshotTool:
         )
 
         # Populate monitor options
-        monitor_options = ["All Monitors (Virtual)"]
+        monitor_options = []
         for i, monitor in enumerate(
             self.monitors[1:], 1
-        ):  # Skip the first "All Monitors" entry
+        ):  # Skip the first virtual screen entry
             monitor_options.append(
                 f"Monitor {i} ({monitor['width']}x{monitor['height']})"
             )
@@ -272,12 +272,9 @@ class ScreenshotTool:
 
         # Get the selected monitor
         monitor_index = self.monitor_var.get()
-        if monitor_index.startswith("All Monitors"):
-            monitor = self.monitors[0]  # Virtual screen (all monitors)
-        else:
-            # Extract monitor number from selection
-            monitor_num = int(monitor_index.split()[1])
-            monitor = self.monitors[monitor_num]
+        # Extract monitor number from selection
+        monitor_num = int(monitor_index.split()[1])
+        monitor = self.monitors[monitor_num]
 
         # Create selection window
         self.selection_window = tk.Toplevel(self.root)
@@ -286,11 +283,7 @@ class ScreenshotTool:
         self.selection_window.overrideredirect(True)  # Remove window decorations
 
         # Position window on the selected monitor
-        if monitor_index.startswith("All Monitors"):
-            # Use virtual screen dimensions
-            geometry = f"{monitor['width']}x{monitor['height']}+{monitor['left']}+{monitor['top']}"
-        else:
-            geometry = f"{monitor['width']}x{monitor['height']}+{monitor['left']}+{monitor['top']}"
+        geometry = f"{monitor['width']}x{monitor['height']}+{monitor['left']}+{monitor['top']}"
 
         self.selection_window.geometry(geometry)
         self.selection_window.attributes("-alpha", 0.3)  # Set alpha after geometry
@@ -341,13 +334,10 @@ class ScreenshotTool:
     def end_selection(self, event):
         # Calculate absolute coordinates
         monitor_index = self.monitor_var.get()
-        if monitor_index.startswith("All Monitors"):
-            offset_x = offset_y = 0
-        else:
-            monitor_num = int(monitor_index.split()[1])
-            monitor = self.monitors[monitor_num]
-            offset_x = monitor["left"]
-            offset_y = monitor["top"]
+        monitor_num = int(monitor_index.split()[1])
+        monitor = self.monitors[monitor_num]
+        offset_x = monitor["left"]
+        offset_y = monitor["top"]
 
         # Store selected area (ensure positive width/height)
         x1 = min(self.start_x, event.x) + offset_x
